@@ -1,11 +1,7 @@
 version: 2
 updates:
-  - package-ecosystem: npm
-    directory: /firebridge-backend
-    schedule: {interval: weekly}
-  - package-ecosystem: npm
-    directory: /firebridge-frontend
-    schedule: {interval: weekly}
+  # The initial repository has CI/CD files only; application manifests arrive later.
   - package-ecosystem: github-actions
     directory: /
     schedule: {interval: weekly}
+    open-pull-requests-limit: 0

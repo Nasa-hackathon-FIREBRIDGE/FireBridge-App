@@ -114,7 +114,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
         with: {persist-credentials: false}
       - name: Scan tracked source for credentials
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           scan-type: fs
@@ -141,28 +141,28 @@ jobs:
       - name: Validate HTTPS configuration with a disposable certificate
         run: python3 deploy/check_proxy.py --revision '${{ github.sha }}'
       - name: Scan API runtime image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: firebridge-webapp-api:${{ github.sha }}
           severity: HIGH,CRITICAL
           exit-code: '1'
       - name: Scan worker runtime image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: firebridge-webapp-worker:${{ github.sha }}
           severity: HIGH,CRITICAL
           exit-code: '1'
       - name: Scan frontend runtime image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: firebridge-webapp-frontend:${{ github.sha }}
           severity: HIGH,CRITICAL
           exit-code: '1'
       - name: Scan Redis runtime image
-        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1
+        uses: aquasecurity/trivy-action@ed142fd0673e97e23eac54620cfb913e5ce36c25
         with:
           version: v0.76.2
           image-ref: redis:7-alpine@sha256:c5d34a98396a4775e223c74e929162c35c5a2182901ba26b50ade939941ce14b

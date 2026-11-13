@@ -1,0 +1,16 @@
+{
+  "repository": "Nasa-hackathon-FIREBRIDGE/FireBridge-App",
+  "previous_repository": "Nasa-hackathon-FIREBRIDGE/firebridge-project",
+  "deployment_branch": "main",
+  "environment": "webapp-production",
+  "deployment_account": "firebridge-webapp-deploy",
+  "gateway": "webapp_gateway.py",
+  "runtime_root": "/opt/firebridge/webapp",
+  "required_code": [
+    "firebridge-backend/package.json",
+    "firebridge-backend/package-lock.json",
+    "firebridge-frontend/package.json",
+    "firebridge-frontend/package-lock.json",
+    "firebridge-backend/apps/api/src/app.ts"
+  ]
+}

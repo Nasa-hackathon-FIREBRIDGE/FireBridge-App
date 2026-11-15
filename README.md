@@ -37,9 +37,22 @@ le VPS doit utiliser la configuration et les réseaux prévus pour la base exist
 - Configurer `DOCKER_DATABASE_URL`, `DOCKER_REDIS_URL`, `DEFAULT_SCOPE_KEY`,
   `FRONTEND_API_URL` et `CORS_ORIGINS` pour le serveur. Les secrets restent dans
   les `.env` privés ; les URL frontend sont publiques et fixées au build.
-- Prévoir HTTPS et le reverse proxy. Le raccordement au VPS n'est pas effectué
-  par la publication du code dans cette branche.
+- Pour la production, utiliser `deploy/compose.production.yaml` et les variables
+  privées de `/opt/firebridge/webapp/runtime.env` ; voir [deploy/README.md](deploy/README.md).
+  Le Compose de développement ne doit pas remplacer la stack data existante.
 
 Les images API, worker et frontend ont été construites dans cette structure.
-L'audit npm du backend signale des dépendances à actualiser avant exposition
-publique : six alertes de production, dont trois élevées, au 8 novembre 2026.
+Les dépendances ont été actualisées avant exposition publique : les audits npm de
+production backend et frontend ne signalent aucune vulnérabilité au 8 novembre 2026.
+Six alertes modérées restent dans les outils de développement backend ; aucune
+alerte élevée ou critique n'est acceptée par la CI.
+
+## Production Contabo
+
+- Site : https://astramind.solutions ; API : `/api/v1`.
+- La branche `staging` est déployée après validation par `.github/workflows/webapp.yml`.
+- Configuration, réseau privé, compte SQL limité et fonctionnement CI/CD :
+  [deploy/README.md](deploy/README.md).
+- Les images sont construites/testées en CI, puis transférées par un compte SSH
+  dédié. Aucun secret serveur ne fait partie des images ou du dépôt.
+- La base de données et les pipelines existants restent dans leur propre stack.

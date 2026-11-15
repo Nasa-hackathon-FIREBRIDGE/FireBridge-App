@@ -207,8 +207,9 @@ export default function HomePage() {
           </motion.div>
         </div>
 
+        {/* Percentage margins follow the section width, so cap them at the globe's 1180px maximum. */}
         <motion.div
-          className="relative mx-auto -mt-[6%] w-full max-w-[1180px] px-2 [mask-image:linear-gradient(to_bottom,black_70%,transparent)] sm:-mt-[15%]"
+          className="relative mx-auto -mt-[min(6%,71px)] w-full max-w-[1180px] px-2 [mask-image:linear-gradient(to_bottom,black_70%,transparent)] sm:-mt-[min(15%,177px)]"
           initial={{ opacity: 0, scale: 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, delay: 0.15, ease }}

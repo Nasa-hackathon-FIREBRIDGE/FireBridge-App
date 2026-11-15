@@ -32,6 +32,15 @@ def activate(sha, allow_legacy=False):
     verify(sha, allow_legacy=allow_legacy)
     env = ROOT/'.env'
     original = env.read_text() if env.exists() else None
+    proxy = ROOT/'nginx.proxy.conf'
+    original_proxy = proxy.read_text() if proxy.exists() else None
+    pending = ROOT/'pending-new-app.json'
+    publish = pending.exists() and not allow_legacy
+    release_proxy = None
+    if publish:
+        if json.loads(pending.read_text()).get('repository') != REPO:
+            raise ValueError('Pending publication belongs to a different repository.')
+        release_proxy = (ROOT/'nginx.release.conf').read_text()
     # Database changes are administrator-reviewed, outside this image-only protocol.
     backup = ROOT/'backups'; backup.mkdir(mode=0o700,exist_ok=True)
     stamp = datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')
@@ -47,12 +56,25 @@ def activate(sha, allow_legacy=False):
         run('docker','compose','up','-d','--wait','--wait-timeout','180',timeout=240)
         # Readiness must include real PostgreSQL, Redis and a published catalogue.
         run('docker','compose','exec','-T','api','node','-e',"fetch('http://127.0.0.1:3000/api/v1/health/ready').then(async r=>{if(!r.ok)process.exit(1)}).catch(()=>process.exit(1))")
+        # A verified new-repository release replaces the intentionally blank website.
+        if publish:
+            proxy.write_text(release_proxy)
+            run('docker','compose','exec','-T','proxy','nginx','-t')
+            run('docker','compose','exec','-T','proxy','nginx','-s','reload')
     except Exception:
+        if original_proxy is not None:
+            proxy.write_text(original_proxy)
         if original:
             env.write_text(original);env.chmod(0o600)
             run('docker','compose','up','-d','--wait','--wait-timeout','180',timeout=240)
+        if publish:
+            run('docker','compose','exec','-T','proxy','nginx','-t')
+            run('docker','compose','exec','-T','proxy','nginx','-s','reload')
         raise
-    receipt={'state':'healthy','revision':sha,'deployed_at':datetime.now(timezone.utc).isoformat(),'images':selected,'domain':'astramind.solutions'}
+    if publish:
+        pending.unlink()
+    receipt={'state':'healthy','revision':sha,'deployed_at':datetime.now(timezone.utc).isoformat(),'images':selected,'domain':'ogote.com'}
+    receipt['publication_state']='blank_pending_new_repository_release' if pending.exists() else 'published'
     (ROOT/'deployment.json').write_text(json.dumps(receipt,indent=2)+'\n')
     print(json.dumps(receipt))
 def main():

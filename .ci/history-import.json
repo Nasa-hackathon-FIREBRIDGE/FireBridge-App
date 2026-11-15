@@ -1,0 +1,278 @@
+{
+  "history_type": "reconstructed_import",
+  "replay_date": "2026-11-15",
+  "timezone": "Africa/Casablanca",
+  "repository": "Nasa-hackathon-FIREBRIDGE/FireBridge-App",
+  "source_repository": "Nasa-hackathon-FIREBRIDGE/firebridge-project",
+  "source_head": "e0d709a0d89417d9690b6e6d34a86c7be61fe7cc",
+  "source_tree": "ffb0b96c337ae1ca4ae003776c9aa249ee8ed2b1",
+  "ci_baseline": "a4fb128af5064258cf3f64037a27f7e1b4620dfe",
+  "branch": "codex/replay-2026-11-15",
+  "original_source_commit_count": 348,
+  "compacted_source_commit_count": 30,
+  "commits": [
+    {
+      "source_compact_commit": "5cc3ca4eeed62bc2ddf51339d6246bcd76c73fc5",
+      "date": "2026-11-15T09:00:00+00:00",
+      "subject": "feat: establish the integrated FireBridge frontend and backend",
+      "status": "replayed",
+      "new_commit": "e83dd0521e2fd25f749ca6ad3b6298abb073be8d"
+    },
+    {
+      "source_compact_commit": "e620c60aedc3cf6e58800175e2344afb7192fcd5",
+      "date": "2026-11-15T09:10:00+00:00",
+      "subject": "ci: validate the combined application and prepare delivery artifacts",
+      "status": "replayed",
+      "new_commit": "e05223f39edf3bb5d3471c7f20fba503e7d0eb06"
+    },
+    {
+      "source_compact_commit": "3f40db0d76bf7969114cb7b6c848a476f90ae7b4",
+      "date": "2026-11-15T09:20:00+00:00",
+      "subject": "deploy: secure production images and automate HTTPS certificate renewal",
+      "status": "replayed",
+      "new_commit": "b6cce58dd55556b1a770b9bb391c440ea0a5fbdb"
+    },
+    {
+      "source_compact_commit": "ae18e65f4c8bbb40c1212ec7fa56342badbcc0ff",
+      "date": "2026-11-15T09:30:00+00:00",
+      "subject": "fix: align native spatial reads with canonical pipeline metadata",
+      "status": "replayed",
+      "new_commit": "f87cc46f743020e34a9f36e89ccbfd126c794fac"
+    },
+    {
+      "source_compact_commit": "2ceda57343a434ce277180ea625f8e23634da976",
+      "date": "2026-11-15T09:40:00+00:00",
+      "subject": "feat: prepare historical area analyses with responsive completion polling",
+      "status": "replayed",
+      "new_commit": "88180f999285823f752a905a5a8de6652cfe5821"
+    },
+    {
+      "source_compact_commit": "279e001d01a16ab6b1264715648289ed3afa6345",
+      "date": "2026-11-15T09:50:00+00:00",
+      "subject": "style: introduce FireBridge branding and the ember design system",
+      "status": "replayed",
+      "new_commit": "49880290fdf7a72a1a321eb7dc356a1e31c60e61"
+    },
+    {
+      "source_compact_commit": "c8bae6994b539e25f67268f15a7a34ee8006d49f",
+      "date": "2026-11-15T10:00:00+00:00",
+      "subject": "feat: integrate usable map controls and satellite activity insights",
+      "status": "replayed",
+      "new_commit": "1f32cf4715111be03f9a5384e04f41426493762b"
+    },
+    {
+      "source_compact_commit": "3154eabdb9ffa22bb46967b88185f62024c35360",
+      "date": "2026-11-15T10:10:00+00:00",
+      "subject": "feat: present satellite science through the dashboard and landing page",
+      "status": "replayed",
+      "new_commit": "527019866786f7311aaa31e66f18c572f781f35f"
+    },
+    {
+      "source_compact_commit": "3337e015f9e6eaae81be825043ec9837a0e14324",
+      "date": "2026-11-15T10:20:00+00:00",
+      "subject": "fix: support historical analyses beyond the standard archive cutoff",
+      "status": "replayed",
+      "new_commit": "1f0a8b36ffa3f7d9f09296860c686b4fa1b609ba"
+    },
+    {
+      "source_compact_commit": "48d403aadfbafcff09e97f81b54295ad4bae15c7",
+      "date": "2026-11-15T10:30:00+00:00",
+      "subject": "feat: show orbital analysis preparation across request and router transitions",
+      "status": "replayed",
+      "new_commit": "a03e654ad3d0878a3a7533148aad6c625597303d"
+    },
+    {
+      "source_compact_commit": "20e2f691f01d5b6caa3cffeac4adc2a01444e2f4",
+      "date": "2026-11-15T10:40:00+00:00",
+      "subject": "feat: implement the sensor harmonization and orbital drift engine",
+      "status": "replayed",
+      "new_commit": "47dd9699c3cb60608edb30a0d1e7533cc54c7aa9"
+    },
+    {
+      "source_compact_commit": "be77cde20ea3d01c6dce3e6d44d0bec971e1deea",
+      "date": "2026-11-15T10:50:00+00:00",
+      "subject": "feat: explain sensor continuity through rehearsals, calendar and verdicts",
+      "status": "replayed",
+      "new_commit": "ad6e6a6d3e7d3031679637853c9dbcf2a80fec31"
+    },
+    {
+      "source_compact_commit": "a7fb6b3db75f19407f5d6e78419a950c91053474",
+      "date": "2026-11-15T11:00:00+00:00",
+      "subject": "feat: connect the AI copilot to grounded workspace explanations",
+      "status": "replayed",
+      "new_commit": "11bcc5c8fb0f04e4b649543b5ca9e1be5102ebbf"
+    },
+    {
+      "source_compact_commit": "f5a8fff739f2a2c2eed5dabb2f6ef42b1ff8f19b",
+      "date": "2026-11-15T11:10:00+00:00",
+      "subject": "feat: build the interactive fire atlas with satellite filters and replay",
+      "status": "replayed",
+      "new_commit": "7da133c0bc13f6f15b5ee42dd9b13fa4241fb40b"
+    },
+    {
+      "source_compact_commit": "047e501e4eaf8f0f066cc23cf205ea92852a97f0",
+      "date": "2026-11-15T11:20:00+00:00",
+      "subject": "fix: normalize copilot answers and handle refusals consistently",
+      "status": "replayed",
+      "new_commit": "dbfbd10c12cc482e27e7f6c906ad548c977c13ad"
+    },
+    {
+      "source_compact_commit": "0f6003e6971405eb8a49524846e60d1ad1c5f5ab",
+      "date": "2026-11-15T11:30:00+00:00",
+      "subject": "feat: select country and regional study areas with MultiPolygon support",
+      "status": "replayed",
+      "new_commit": "c25de4bfc86f5613d237aedc2c2c0480cc9cbb03"
+    },
+    {
+      "source_compact_commit": "96d09d787dc1e6d9aabf3605b8cb7407910b9b35",
+      "date": "2026-11-15T11:40:00+00:00",
+      "subject": "fix: cache satellite imagery and reset newly requested workspaces",
+      "status": "replayed",
+      "new_commit": "d91fc55f122249f4be3c929bca0c4f76d98e18b9"
+    },
+    {
+      "source_compact_commit": "ff253685345756636c0a447fefd8836080d742b0",
+      "date": "2026-11-15T11:50:00+00:00",
+      "subject": "feat: coordinate thirty-year historical analysis windows across the app",
+      "status": "replayed",
+      "new_commit": "57d727d2fcb38d90467e63969c475466aacbab2b"
+    },
+    {
+      "source_compact_commit": "b83ce6cfb0ec9f4dca672ee52183866466d17acf",
+      "date": "2026-11-15T12:00:00+00:00",
+      "subject": "feat: publish science and source pages using open imagery",
+      "status": "replayed",
+      "new_commit": "27491d428ffcaf7f91f0d61b4e4f0d87070cea46"
+    },
+    {
+      "source_compact_commit": "9fa09b0df39a56613d923e54012bbcb68420f046",
+      "date": "2026-11-15T12:10:00+00:00",
+      "subject": "refactor: localize connected data screens and gate administrative features",
+      "status": "replayed",
+      "new_commit": "e4d5bef1f2c877093aa25d8f41e4a8a6f92ca1a5"
+    },
+    {
+      "source_compact_commit": "0d9a405a637d4ea9c589e2695312b3c2e229117e",
+      "date": "2026-11-15T12:20:00+00:00",
+      "subject": "feat: redesign the data catalogue and document the connected application",
+      "status": "replayed",
+      "new_commit": "0e6435a3ff95acec90e7f386fa049a0d054e5ec4"
+    },
+    {
+      "source_compact_commit": "5e4ec468008a082ef3a61e308d9a23c9001c0f9a",
+      "date": "2026-11-15T12:30:00+00:00",
+      "subject": "feat: add responsive D3 analytics and verified SVG exports",
+      "status": "replayed",
+      "new_commit": "fd1d03251668fdcb81f26cf7ca951ffba672aca1"
+    },
+    {
+      "source_compact_commit": "e49a72e7c9e8f4c4fdc7031cf6cecc7968959302",
+      "date": "2026-11-15T12:40:00+00:00",
+      "subject": "feat: derive independent scientific evidence and weather comparisons",
+      "status": "replayed",
+      "new_commit": "c3b6b18cc8c927dde38f73b415632528343bf8c1"
+    },
+    {
+      "source_compact_commit": "680d330bdc4d04830a9ee3c8df9d3a8a0fb0b613",
+      "date": "2026-11-15T12:50:00+00:00",
+      "subject": "feat: add editorial storytelling and satellite activity visualizations",
+      "status": "replayed",
+      "new_commit": "78b4490a0c68b850573c26ace58534ad112ccbca"
+    },
+    {
+      "source_compact_commit": "8e1ddd3c22bb2e8ab47df38602ef4afdc709df2a",
+      "date": "2026-11-15T13:00:00+00:00",
+      "subject": "feat: explain fire drivers and sensor-bridge findings with scientific checks",
+      "status": "replayed",
+      "new_commit": "88630fa4ff88714ed25d103c39f684ad114b9cdf"
+    },
+    {
+      "source_compact_commit": "ae496f737c0353e88521b8d017e4689929186443",
+      "date": "2026-11-15T13:10:00+00:00",
+      "subject": "refactor: rebuild overview and native activity panels around available records",
+      "status": "replayed",
+      "new_commit": "25fdc095abd880bff0485e5f6ed181e563e12020"
+    },
+    {
+      "source_compact_commit": "c889b390139ac7989a4690eb94e1d0eade81a4cc",
+      "date": "2026-11-15T13:20:00+00:00",
+      "subject": "feat: improve responsive workspace navigation and editorial headings",
+      "status": "replayed",
+      "new_commit": "a168eec14cbbfc027fc6c11bb44d5bb02b7d651f"
+    },
+    {
+      "source_compact_commit": "b6ba20d8c06d729d239d1ba9acc4cf3815079a98",
+      "date": "2026-11-15T13:30:00+00:00",
+      "subject": "feat: connect copilot navigation to weather and independent evidence",
+      "status": "replayed",
+      "new_commit": "b3b63ce4195a39abd19ac2f773a8bdb1da9ad5a8"
+    },
+    {
+      "source_compact_commit": "d1cc0eac5e415f144a9952e9749f203a7859348a",
+      "date": "2026-11-15T13:40:00+00:00",
+      "subject": "docs: explain verification methods and credit weather and satellite sources",
+      "status": "replayed",
+      "new_commit": "6078e67cc9234cacbc4dfc1b96d76e62f5a00eb9"
+    },
+    {
+      "source_compact_commit": "7ee2b57e7fd5a967dc7b4af34aba26344202f416",
+      "date": "2026-11-15T13:50:00+00:00",
+      "subject": "docs: describe analysis pages and frontend feature organization",
+      "status": "replayed",
+      "new_commit": "0eabc427f28a7d5297e0eb760dfcba2f16e26527"
+    }
+  ],
+  "application_code_matches_source": false,
+  "new_ci_configuration_preserved": false,
+  "note": "Commit timestamps describe an explicitly reconstructed history. GitHub push, PR and CI timestamps are recorded independently.",
+  "application_code_changes": [
+    {
+      "path": "firebridge-frontend/src/pages/methods/facts.ts",
+      "reason": "User-requested repository link migration"
+    },
+    {
+      "path": "firebridge-frontend/src/pages/methods-pages.test.tsx",
+      "reason": "User-requested repository link migration"
+    }
+  ],
+  "new_ci_configuration_changes": [
+    {
+      "path": ".github/workflows/webapp.yml",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/README.md",
+      "reason": "User correction: keep the public website blank until a successful verified FireBridge-App release; test publication and rollback gating"
+    },
+    {
+      "path": "deploy/check_proxy.py",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/nginx.proxy.conf",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/provision_server.py",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/setup_tls.sh",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/smoke_images.py",
+      "reason": "User-authorized ogote.com primary domain migration and retained legacy API/AI compatibility"
+    },
+    {
+      "path": "deploy/webapp_gateway.py",
+      "reason": "User correction: keep the public website blank until a successful verified FireBridge-App release; test publication and rollback gating"
+    },
+    {
+      "path": ".ci/tests/test_publication_gate.py",
+      "reason": "User correction: keep the public website blank until a successful verified FireBridge-App release; test publication and rollback gating"
+    }
+  ],
+  "primary_domain": "ogote.com",
+  "publication_policy": "Public website remains blank until a successful validated FireBridge-App release."
+}

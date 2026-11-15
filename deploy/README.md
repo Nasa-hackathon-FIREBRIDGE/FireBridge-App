@@ -5,7 +5,7 @@ connection only; application build and deployment wait for source code.
 
 # Production deployment
 
-Domain: https://astramind.solutions. The production branch is `main`.
+Domain: https://ogote.com. The production branch is `main`.
 
 The webapp has a separate Compose project at `/opt/firebridge/webapp`. It reuses
 PostGIS through `firebridge_default`; it does not start or replace a database.
@@ -99,7 +99,7 @@ Schema additions are deliberately not reversed by image rollback.
    schema `980a58006432cea3214b8d0b492cf4781322bd1d`, and at least one real published
    catalogue release. A lake download alone is insufficient for application readiness.
 2. Install Docker/Compose, configure key-only SSH/UFW, and point A records for
-   `astramind.solutions` and `www.astramind.solutions` to the server. Ports 80/443
+   `ogote.com` and `www.ogote.com` to the server. Ports 80/443
    must be reachable; PostgreSQL, Redis, Airflow and pgAdmin stay private.
 3. Copy this reviewed source tree to `/opt/firebridge/webapp/installer`. Back up
    the database using the data platform's backup tool before applying additions.
@@ -138,3 +138,14 @@ inside the tile transaction, retaining the five-second statement limit and 8 MB
 work-memory cap. On the real 11,815-record verification area, this removed an
 approximately eight-second world-scan plan; six optimized Prisma executions took
 159–314 ms. See the [PostgreSQL prepared-plan documentation](https://www.postgresql.org/docs/16/sql-prepare.html).
+
+The primary domain is `ogote.com`; `www.ogote.com` and website visits to
+`astramind.solutions` / `www.astramind.solutions` redirect there. The legacy
+HTTPS `/api/` and `/agent/` routes remain available for existing clients.
+Both domains keep separate automatically renewed certificates. Runtime CORS
+permits only the configured exact origins, including the primary and legacy origins.
+
+The public website is intentionally blank while awaiting application code from
+FireBridge-App. DNS, HTTPS and restricted deployment connections remain active.
+Only a successful verified App deployment clears the pending publication marker
+and activates the website; CI/CD-only pushes and opening PRs keep it blank.
